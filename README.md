@@ -1,162 +1,118 @@
-# ECHO — Editorial Developer & Designer Portfolio
+# MIRA. — Personal Portfolio
 
-<div align="center">
+A personal developer portfolio showcasing my interests, projects, and learning journey across cybersecurity, generative AI, and software development.
 
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v3-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-  [![WebGL](https://img.shields.io/badge/Graphics-OGL_WebGL-black?style=for-the-badge&logo=webgl&logoColor=white)](https://github.com/oframe/ogl)
-  [![License](https://img.shields.io/badge/License-MIT-000000?style=for-the-badge)](LICENSE)
+**MIRA** is customized from the open-source ECHO portfolio template created by Jishnu Mondal.
 
-  <p align="center">
-    <strong>A bespoke, high-performance monochrome editorial portfolio showcasing digital craftsmanship, spatial web animations, and interactive design engineering.</strong>
-  </p>
+## About
 
-  <p align="center">
-    Crafted by <strong><a href="https://github.com/Jishnu09-siuu">Jishnu Mondal</a></strong> — Designer & Full-Stack Creative Developer.
-  </p>
+I'm Sangamithirai RS, a Computer Science Engineering student specializing in Big Data Analytics. I'm interested in cybersecurity, generative AI, and software engineering. I use personal projects and hands-on experimentation to explore technologies and develop practical skills.
 
-</div>
+## Features
 
----
+* **Interactive Hero Section** — Introduction and navigation to key portfolio sections.
+* **About Section** — Background, interests, and technical focus.
+* **Experience Timeline** — Learning milestones, coursework, and project experience.
+* **Project Carousel** — Showcases selected projects.
+* **My Work Section** — Visual presentation of projects.
+* **Interests Section** — Areas of technology I'm exploring.
+* **Contact Form** — Allows visitors to send messages.
+* **Responsive Navigation** — Navigation for desktop and mobile devices.
+* **Interactive Animations** — Scroll-based effects and WebGL elements.
 
-## ✦ Overview
+## Tech Stack
 
-**ECHO** is an editorial developer and designer portfolio engineered with a focus on typography, fluid physics, and cutting-edge web graphics. Built around a curated monochrome aesthetic, it marries brutalist minimalism with rich micro-interactions, hardware-accelerated scroll animations, and interactive 3D drum reel navigation.
+* HTML5
+* CSS3
+* Tailwind CSS
+* JavaScript ES Modules
+* OGL / WebGL
+* Python HTTP Server
 
-Whether presenting production landing pages, full-stack applications, or bespoke brand identities, ECHO provides an immersive editorial reading and browsing experience.
+## Featured Projects
 
----
+### Afterglow
 
-## ✦ Key Features & Interactive Architecture
+A privacy-focused platform for creating, preserving, and sharing personal experiences.
 
-### 1. 🪐 Custom ECHO Orbital Preloader
-- Seamless intro experience with an orbital wavy dot animation synchronized via `requestAnimationFrame`.
-- Auto-detects first load and dissolves smoothly to unveil the editorial hero section.
+**Technologies:** React, TypeScript, Vite, Tailwind CSS, Supabase.
 
-### 2. 🗞️ Editorial Hero & Metallic Typography Shaders
-- Fluid responsive typography driven by dynamic viewport calculations (`clamp` / `vw`).
-- Multi-layer metallic header effects and integrated portrait depth masking.
-- Intersection-observer-powered entrance reveals that gracefully retrigger on revisit.
+[View Repository](https://github.com/sangamithirai-rs/Afterglow)
 
-### 3. 🔍 `ScrollExpandMedia` Kinetic Canvas
-- Scroll-driven media expansion stage that smoothly interpolates card dimensions, aspect ratio, and blur filters.
-- Dual-layer GPU-accelerated unblur rendering running at 120 FPS without reflow penalties.
-- Minimalist perimeter content layout ensuring 100% unobscured artwork visibility.
+### Tab Zero
 
-### 4. 🧭 Horizontal Spatial Experience Canvas
-- Sticky horizontal timeline translating vertical user scroll into horizontal spatial progression.
-- Interactive timeline panels displaying milestones, career history, and "living flow" energy animations.
-- Accessible fallback honoring user OS preferences (`prefers-reduced-motion`).
+A productivity-focused new-tab experience.
 
-### 5. 🎡 WorksWheel 3D Drum Reel
-- Mathematical 3D cylindrical drum projection with radial ring transformations (`rotateX`, `rotateZ`, `translateZ`).
-- Physics-based smooth drag gestures, momentum inertia, wheel scrolling, and step navigation.
-- Deep project integration linking directly into dynamic modal inspection.
+[View Repository](https://github.com/sangamithirai-rs/tab-zero)
 
-### 6. 🌊 FlexCarousel (OGL WebGL Liquid Preset)
-- Interactive card slider powered by **OGL** (lightweight WebGL engine) with liquid lens bending and real-time mesh displacement.
-- Dynamic accordion states, focus-on-click navigation, and full keyboard/touch support.
+### AWAKEN
 
-### 7. 🪟 Interactive Project Inspection Modal
-- Glassmorphic modal viewer with animated backdrop blur (`cubic-bezier` spring easing).
-- Comprehensive project metadata: client background, deliverable scopes, tech stacks, and direct links to live deployments.
+A productivity RPG concept that combines quests, personal attributes, and game-inspired progression.
 
----
+**Status:** Concept stage.
 
-## ✦ Tech Stack
+### YARUKI
 
-| Domain | Technology | Description |
-|---|---|---|
-| **Structure** | HTML5 / Semantic Web | SEO-optimized, accessible markup with meta hierarchy |
-| **Styling** | Vanilla CSS + Tailwind CSS v3 | Custom dark/light design tokens, typography & CSS variables |
-| **Graphics & WebGL** | [OGL](https://github.com/oframe/ogl) | High-performance WebGL 3D meshes & shaders for liquid bending |
-| **Logic & Motion** | Vanilla JavaScript (ES Modules) | Lightweight, zero-framework overhead, modular components |
-| **Typography** | Plus Jakarta Sans | Editorial modernist sans-serif loaded from Google Fonts |
-| **Components** | `flex-carousel`, `works-wheel`, `scroll-expand-media` | Bespoke modular UI engines |
+A backend development project exploring TypeScript, Supabase, and PostgreSQL.
 
----
+**Status:** In development.
 
-## ✦ Featured Projects
+## Areas of Interest
 
-The portfolio indexes a curated roster of production web applications, landing pages, and client systems:
+* Cybersecurity
+* Generative AI
+* Software Engineering
+* Full-Stack Development
+* Cloud Technologies
 
-- **Aether AI**: Cognitive workspace engineered for deep systemic research and reasoning canvas telemetry.
-- **Aether Protocol**: Monolithic preview portal and executive onboarding architectural briefing flow.
-- **Afterform S01**: Minimalist architectural lookbook and editorial digital showcase.
-- **Cafe Website (Mocha & Miso)**: Full-stack cafe management system with order processing and real-time reservation portal.
-- **Design Studio**: Bold creative agency identity website with fluid layout systems.
-- **Julian Vance Photography**: Analog & editorial photography archive showcasing visual storytelling.
-- **Sen Cruzo Client Portfolio**: Luxury architectural client presentation portfolio with custom typography.
-
----
-
-## ✦ Project Structure
-
-```bash
-ECHO-WEBSITE/
-├── index.html                   # Core single-page portfolio layout & markup
-├── flex-carousel.js             # WebGL / OGL-powered liquid carousel engine
-├── FlexCarousel.css             # Stylesheet for carousel layout & states
-├── FlexCarousel.tsx             # React / TypeScript source reference
-├── works-wheel.js               # 3D Cylindrical drum reel component
-├── scroll-expand-media.js       # Scroll-driven media expansion engine
-├── ScrollExpandMedia.tsx        # Component source reference
-├── experience-section.js        # Horizontal spatial timeline engine
-├── package.json                 # Project configuration & scripts
-├── assets/                      # Brand assets, portrait imagery, and icons
-├── Project Images/              # Production portfolio preview captures
-└── Landing Page Assest/         # Full-length landing page showcase assets
-```
-
----
-
-## ✦ Getting Started Locally
-
-This project is built using native ES modules and standard web technologies. You can run it with any local HTTP server:
+## Run Locally
 
 ### Prerequisites
-- Python 3.x **or** Node.js installed on your machine.
 
-### Option 1: Python Simple HTTP Server (Recommended)
-```bash
-# Clone the repository
-git clone https://github.com/Jishnu09-siuu/ECHO-WEBSITE.git
-cd ECHO-WEBSITE
+* Git
+* Python 3 or Node.js
 
-# Run local development server
-npm start
-# or directly:
-python3 -m http.server 8080
-```
-Then navigate to `http://localhost:8080` in your browser.
+### Steps
 
-### Option 2: Node.js / Vite / `npx serve`
-```bash
-npx serve .
-# or
-npx live-server
-```
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/sangamithirai-rs/portfolio.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd portfolio
+   ```
+
+3. Start the local server.
+
+   If Python is installed:
+
+   ```bash
+   python -m http.server 8080
+   ```
+
+4. Open the following address in your browser:
+
+   `http://localhost:8080`
+
+   If the project already includes a working `npm start` script, you can use `npm start` instead.
+
+## Connect
+
+* **GitHub:** [sangamithirai-rs](https://github.com/sangamithirai-rs)
+* **LinkedIn:** [Sangamithirai RS](https://www.linkedin.com/in/sangamithirai-rs)
+
+## Credits and License
+
+This portfolio is a customized version of the open-source **ECHO portfolio template** created by **Jishnu Mondal**.
+
+The original template's design and implementation served as the foundation for this project. The branding, content, project information, and selected sections have been customized for my personal portfolio.
+
+The original template is distributed under the MIT License. The original copyright and license notices should be retained in accordance with the license terms.
 
 ---
 
-## ✦ Deployment
-
-Because ECHO is completely static and modular, it can be deployed instantly to any edge hosting provider:
-
-- **Vercel**: Run `vercel` from the root directory or connect the GitHub repository.
-- **Netlify**: Drag and drop the folder or connect via Git with publish directory set to `/`.
-- **GitHub Pages**: Head to repository **Settings > Pages** and set source to branch `main` and folder `/ (root)`.
-
----
-
-## ✦ Connect & Socials
-
-- **Portfolio**: [Jishnu Mondal](https://jishnumondal.vercel.app/)
-- **GitHub**: [@Jishnu09-siuu](https://github.com/Jishnu09-siuu)
-- **LinkedIn**: [jishnu-mondal](https://www.linkedin.com/in/jishnu-mondal/)
-- **X / Twitter**: [@Jishn8m](https://x.com/Jishn8m)
-
----
-
-## ✦ License
-
-This project is open-source and available under the [MIT License](LICENSE).
+**MIRA. — Building beyond the interface.**
