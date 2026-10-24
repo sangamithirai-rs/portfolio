@@ -1,5 +1,5 @@
 /**
- * ExperienceSection — "Where I've Been"
+  * ExperienceSection — "The MIRA Journey"
  * Immersive Horizontal Spatial Canvas controlled by Vertical Scroll
  * Powered by @fiddle-digital/string-tune runtime
  */
@@ -36,7 +36,9 @@ export async function initExperienceSection() {
     StringParallax = mod.StringParallax;
     StringMagnetic = mod.StringMagnetic;
   } catch (err) {
-    console.warn('[Experience] Falling back to global window.StringTune:', err);
+    if (typeof globalThis.console?.warn === 'function') {
+      globalThis.console.warn('[Experience] Falling back to global window.StringTune:', err);
+    }
     const ST = window.StringTune?.StringTune || window.StringTune;
     if (ST) {
       StringTuneClass = ST;
@@ -100,7 +102,26 @@ export async function initExperienceSection() {
   function renderFrame() {
     isTicking = false;
 
-    if (prefersReducedMotion) {
+        if (prefersReducedMotion) {
+      currentProgress = targetProgress;
+      currentTranslateX = targetTranslateX;
+
+      stage.style.transform = `translate3d(${currentTranslateX}px, 0, 0)`;
+
+      if (hudProgress) {
+        hudProgress.style.width = `${currentProgress * 100}%`;
+      }
+
+      if (hudPhase) {
+        if (currentProgress < 0.30) {
+          hudPhase.textContent = 'MY JOURNEY';
+        } else if (currentProgress < 0.65) {
+          hudPhase.textContent = 'EXPERIENCE';
+        } else {
+          hudPhase.textContent = 'BUILDING';
+        }
+      }
+
       return;
     }
 
@@ -133,14 +154,14 @@ export async function initExperienceSection() {
       hudProgress.style.width = `${(currentProgress * 100).toFixed(1)}%`;
     }
 
-    // 5. Update HUD Phase Title
+        // 5. Update HUD Phase Title
     if (hudPhase) {
       if (currentProgress < 0.30) {
-        hudPhase.textContent = "ORIGIN & FOUNDATIONS";
+        hudPhase.textContent = 'MY JOURNEY';
       } else if (currentProgress < 0.65) {
-        hudPhase.textContent = "SELF-DIRECTED LEARNING";
+        hudPhase.textContent = 'EXPERIENCE';
       } else {
-        hudPhase.textContent = "FREELANCE / INDEPENDENT";
+        hudPhase.textContent = 'BUILDING';
       }
     }
 

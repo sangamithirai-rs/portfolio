@@ -33,72 +33,51 @@ function place(ringDeg, drumDeg, ringR, drumR, bow, m) {
   );
 }
 
+
 export const DEFAULT_WORKS = [
   {
-    title: "Aether AI",
-    subtitle: "Cognitive Workspace & Deep Reasoning",
-    description: "A cognitive workspace engineered for deep systemic research, disciplined reasoning, and structural synthesis with real-time active node synthesis.",
-    image: "Landing Page Assest/Screenshot 2026-10-20 at 7.46.25\u202fPM.png",
-    src: "Landing Page Assest/Screenshot 2026-10-20 at 7.46.25\u202fPM.png",
-    href: "#aether-ai",
-    stats: "Active Node Engine • Systemic Synthesis • Structural Research",
-    tools: ["React", "TypeScript", "Tailwind CSS", "AI Engine"],
-    deliverables: ["Cognitive Workspace UI", "Active Node Telemetry", "Interactive Reasoning Canvas"]
+    title: "Afterglow",
+    subtitle: "Privacy-First Personal Experience Platform",
+    description: "A platform for creating, preserving, and sharing personal experiences, featuring Google authentication, photo storage, and private, unlisted, and invite-only access.",
+    image: "Landing Page Assest/Screenshot 2026-10-24 122131.png",
+    src: "Landing Page Assest/Screenshot 2026-10-24 122131.png",
+    href: "https://github.com/sangamithirai-rs/Afterglow",
+    stats: "Personal Project • Privacy-Focused Sharing • Experience Management",
+    tools: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
+    deliverables: ["Experience Creation and Editing", "Access Control and Invitations", "Authentication and Photo Storage"]
   },
   {
-    title: "Aether Protocol",
-    subtitle: "Private Preview & Monolithic Deployment",
-    description: "Exclusive onboarding portal and architectural briefing interface engineered for research scientists, architectural principals, and technical executives.",
-    image: "Landing Page Assest/Screenshot 2026-10-20 at 7.46.43\u202fPM.png",
-    src: "Landing Page Assest/Screenshot 2026-10-20 at 7.46.43\u202fPM.png",
-    href: "#aether-protocol",
-    stats: "Version 4.5.2 • Monolithic Core Stability • Immediate Deployment",
-    tools: ["Next.js", "TypeScript", "Tailwind CSS", "Figma"],
-    deliverables: ["Briefing Reservation Portal", "Monolithic Design System", "Executive Onboarding Flow"]
+    title: "Tab Zero",
+    subtitle: "Productivity-Focused New Tab Experience",
+    description: "A personal project exploring a more focused and intentional browser new-tab experience through interface design and web development.",
+    image: "Landing Page Assest/Screenshot 2026-10-24 121245.png",
+    src: "Landing Page Assest/Screenshot 2026-10-24 121245.png",
+    href: "https://github.com/sangamithirai-rs/tab-zero",
+    stats: "Personal Project • Productivity • Web Development",
+    tools: ["React", "JavaScript", "CSS", "Vite"],
+    deliverables: ["New Tab Interface", "Productivity-Focused Design", "Interactive Web Experience"]
   },
   {
-    title: "Afterform S01",
-    subtitle: "Brutalist Campaign & Visual Monograph",
-    description: "A seasonal fashion campaign and visual monograph capturing structural streetwear silhouettes framed against raw monolithic concrete architecture.",
-    image: "Landing Page Assest/Screenshot 2026-10-20 at 7.45.28\u202fPM.png",
-    src: "Landing Page Assest/Screenshot 2026-10-20 at 7.45.28\u202fPM.png",
-    href: "#afterform-s01",
-    stats: "Campaign S01 • Frame Ref: 35mm_Exp_09 • Visual Monograph",
-    tools: ["Next.js", "Tailwind CSS", "Figma", "Lenis Scroll"],
-    deliverables: ["Visual Monograph Experience", "High-Resolution Lookbook", "Seasonal Campaign Direction"]
+    title: "AWAKEN",
+    subtitle: "Gamified Productivity RPG Concept",
+    description: "A concept for a productivity application inspired by role-playing games, combining quests, personal attributes, and progress tracking to encourage consistent self-improvement.",
+    image: "Landing Page Assest/Screenshot 2026-10-24 114331.png",
+    src: "Landing Page Assest/Screenshot 2026-10-24 114331.png",
+    href: "https://github.com/sangamithirai-rs",
+    stats: "Concept • Quest-Based Progression • Personal Development",
+    tools: ["UI/UX Design", "Product Design", "Application Development"],
+    deliverables: ["Quest Board Concept", "Character Attribute System", "Gamified Productivity Experience"]
   },
   {
-    title: "Afterform System",
-    subtitle: "Brutalist Apparel & Brand Manifesto",
-    description: "A monolithic architectural apparel manifesto stripping garments of emblems and logos, focusing on pure volume, silhouette, and human-concrete alignment.",
-    image: "Landing Page Assest/Screenshot 2026-10-20 at 7.45.46\u202fPM.png",
-    src: "Landing Page Assest/Screenshot 2026-10-20 at 7.45.46\u202fPM.png",
-    href: "#afterform-system",
-    stats: "Tokyo Studio • Berlin Lab • Seoul Showroom",
-    tools: ["React", "Tailwind CSS", "Figma", "GSAP"],
-    deliverables: ["Brand Manifesto Landing Page", "Brutalist Lookbook System", "E-Commerce Catalog Layout"]
-  },
-  {
-    title: "Maison Éléara",
-    subtitle: "Fine Jewellery & Parisian Atelier",
-    description: "An haute jewellery boutique celebrating sculpted contours in heavy fairmined gold born from geological stillness, crafted in Paris Place Vendôme.",
-    image: "Landing Page Assest/Screenshot 2026-10-20 at 7.44.03\u202fPM.png",
-    src: "Landing Page Assest/Screenshot 2026-10-20 at 7.44.03\u202fPM.png",
-    href: "#maison-eleara",
-    stats: "Place Vendôme Atelier • 18k Recycled Gold • Aurelia Torc & Drops",
-    tools: ["Figma", "React", "Tailwind CSS", "High-Precision Typography"],
-    deliverables: ["Fine Jewellery Boutique", "Atelier Concierge Interface", "Artisanal Archive Showcase"]
-  },
-  {
-    title: "Éléara Campaign",
-    subtitle: "Campaign Edition Vol. IX — Sandstone Edit",
-    description: "An organic editorial campaign highlighting sculpted gold signet jewellery set against raw geological sandstone formations, with private salon concierge booking.",
-    image: "Landing Page Assest/Screenshot 2026-10-20 at 7.44.42\u202fPM.png",
-    src: "Landing Page Assest/Screenshot 2026-10-20 at 7.44.42\u202fPM.png",
-    href: "#eleara-campaign",
-    stats: "Campaign Edition Vol. IX • Sandstone Geology • Atelier Concierge",
-    tools: ["WebGL", "Three.js", "Tailwind CSS", "Smooth Scroll"],
-    deliverables: ["Campaign Lookbook Experience", "Private Salon Reservation Portal", "Sensory Art Direction"]
+    title: "YARUKI",
+    subtitle: "Backend Development in Progress",
+    description: "An ongoing backend project exploring server-side development, database integration, and application data management.",
+    image: "Landing Page Assest/Screenshot 2026-10-24 122216.png",
+    src: "Landing Page Assest/Screenshot 2026-10-24 122216.png",
+    href: "https://github.com/sangamithirai-rs",
+    stats: "In Development • Backend Engineering • Database Integration",
+    tools: ["TypeScript", "Supabase", "PostgreSQL"],
+    deliverables: ["Backend Development", "Database Integration", "Application Data Management"]
   }
 ];
 
@@ -137,6 +116,7 @@ export function initWorksWheel(container, options = {}) {
   // Wheel (preserve-3d anchor)
   const wheelEl = document.createElement("div");
   wheelEl.className = "absolute top-1/2 left-1/2 pointer-events-none";
+  wheelEl.style.pointerEvents = "none";
   wheelEl.style.transformStyle = "preserve-3d";
 
   // Cards
@@ -184,19 +164,20 @@ export function initWorksWheel(container, options = {}) {
 
     card.appendChild(face);
 
-    // Click on card
-    card.addEventListener("click", (e) => {
-      if (dragDelta > 6) return; // Ignore drag clicks
-      if (active === i) {
-        if (onSelect) {
-          onSelect(i, item);
-        } else if (window.openProjectModal) {
-          window.openProjectModal(item);
-        } else if (item.href && item.href.startsWith("http")) {
-          window.open(item.href, "_blank");
-        }
-      } else {
-        to(i + 1);
+    card.style.pointerEvents = "auto";
+    card.style.cursor = "pointer";
+    card.addEventListener("click", (event) => {
+      if (dragDelta > 6) return;
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (onSelect) {
+        onSelect(i, item);
+      } else if (typeof window.openProjectModal === "function") {
+        window.openProjectModal(item);
+      } else if (item.href) {
+        window.location.href = item.href;
       }
     });
 
@@ -332,20 +313,25 @@ export function initWorksWheel(container, options = {}) {
   let isPointerDown = false;
   let dragStartY = 0;
   let dragDelta = 0;
+  let dragPointerId = null;
+  let hasCapturedPointer = false;
 
   stageEl.addEventListener("pointerdown", (event) => {
     isPointerDown = true;
     dragStartY = event.clientY;
     dragDelta = 0;
-    try {
-      stageEl.setPointerCapture(event.pointerId);
-    } catch (_) {}
+    dragPointerId = event.pointerId;
+    hasCapturedPointer = false;
   });
 
   stageEl.addEventListener("pointermove", (event) => {
     if (!isPointerDown) return;
     const diff = dragStartY - event.clientY;
     dragDelta += Math.abs(diff);
+    if (dragDelta > 6 && !hasCapturedPointer) {
+      stageEl.setPointerCapture(dragPointerId);
+      hasCapturedPointer = true;
+    }
     to(target + diff / DRAG_UNITS);
     dragStartY = event.clientY;
   });
@@ -353,9 +339,11 @@ export function initWorksWheel(container, options = {}) {
   const endDrag = (event) => {
     if (!isPointerDown) return;
     isPointerDown = false;
-    try {
+    if (hasCapturedPointer && stageEl.hasPointerCapture(event.pointerId)) {
       stageEl.releasePointerCapture(event.pointerId);
-    } catch (_) {}
+    }
+    dragPointerId = null;
+    hasCapturedPointer = false;
     if (target > 1) {
       to(Math.round(target));
     }
