@@ -5,10 +5,28 @@
   "description": "Monochrome Editorial Developer & Designer Portfolio",
   "type": "module",
   "scripts": {
-    "dev": "python3 -m http.server 8080",
-    "start": "python3 -m http.server 8080"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "vite preview",
+    "lint": "eslint . --ext .js,.ts,.tsx",
+    "format": "prettier --write ."
   },
   "dependencies": {
-    "@fiddle-digital/string-tune": "^1.2.0"
+    "@fiddle-digital/string-tune": "^1.2.0",
+    "glob": "^14.0.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@typescript-eslint/eslint-plugin": "^8.72.2",
+    "@typescript-eslint/parser": "^8.72.2",
+    "eslint": "^10.14.0",
+    "jest": "^30.5.2",
+    "prettier": "^3.10.0",
+    "vite": "^8.3.8"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true
   }
 }
