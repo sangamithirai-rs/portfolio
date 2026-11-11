@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "start": "vite preview",
     "lint": "eslint . --ext .js,.ts,.tsx",
-    "optimize-images": "imagemin assets/* --out-dir=assets --plugin=imagemin-mozjpeg --plugin=imagemin-pngquant",
+    "optimize-images": "imagemin assets/* --out-dir=assets --plugin=imagemin-mozjpeg --plugin=imagemin-pngquant"
   },
   "dependencies": {
     "@fiddle-digital/string-tune": "^1.2.0",
