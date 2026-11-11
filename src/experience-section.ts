@@ -31,7 +31,7 @@ export async function initExperienceSection() {
   let StringMagnetic = null;
 
   try {
-    const mod = await import('./assets/string-tune.mjs');
+    const mod = await import('../assets/string-tune.mjs');
     StringTuneClass = mod.StringTune || mod.default;
     StringProgress = mod.StringProgress;
     StringProgressPart = mod.StringProgressPart;
