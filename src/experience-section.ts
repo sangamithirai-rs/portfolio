@@ -1,5 +1,5 @@
 /**
-  * ExperienceSection — "The MIRA Journey"
+ * ExperienceSection — "The MIRA Journey"
  * Immersive Horizontal Spatial Canvas controlled by Vertical Scroll
  * Powered by @fiddle-digital/string-tune runtime
  */
@@ -19,7 +19,9 @@ export async function initExperienceSection() {
   const jumpButtons = document.querySelectorAll('.exp-jump-btn');
 
   // Check reduced motion preference
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
 
   // Resolve StringTune runtime from ES module or global UMD fallback
   let StringTuneClass = null;
@@ -37,13 +39,17 @@ export async function initExperienceSection() {
     StringMagnetic = mod.StringMagnetic;
   } catch (err) {
     if (typeof globalThis.console?.warn === 'function') {
-      globalThis.console.warn('[Experience] Falling back to global window.StringTune:', err);
+      globalThis.console.warn(
+        '[Experience] Falling back to global window.StringTune:',
+        err
+      );
     }
     const ST = window.StringTune?.StringTune || window.StringTune;
     if (ST) {
       StringTuneClass = ST;
       StringProgress = window.StringTune.StringProgress || ST.StringProgress;
-      StringProgressPart = window.StringTune.StringProgressPart || ST.StringProgressPart;
+      StringProgressPart =
+        window.StringTune.StringProgressPart || ST.StringProgressPart;
       StringParallax = window.StringTune.StringParallax || ST.StringParallax;
       StringMagnetic = window.StringTune.StringMagnetic || ST.StringMagnetic;
     }
@@ -51,9 +57,10 @@ export async function initExperienceSection() {
 
   let stringTune = null;
   if (StringTuneClass) {
-    stringTune = typeof StringTuneClass.getInstance === 'function'
-      ? StringTuneClass.getInstance()
-      : StringTuneClass;
+    stringTune =
+      typeof StringTuneClass.getInstance === 'function'
+        ? StringTuneClass.getInstance()
+        : StringTuneClass;
 
     // STRICT REQUIREMENT: Keep native browser scrolling 100% active and unblocked
     stringTune.scrollDesktopMode = 'default';
@@ -91,18 +98,22 @@ export async function initExperienceSection() {
   }
 
   let { totalDist, maxTranslate } = getDimensions();
-  window.addEventListener('resize', () => {
-    ({ totalDist, maxTranslate } = getDimensions());
-    if (prefersReducedMotion) {
-      stage.style.transform = 'none';
-    }
-  }, { passive: true });
+  window.addEventListener(
+    'resize',
+    () => {
+      ({ totalDist, maxTranslate } = getDimensions());
+      if (prefersReducedMotion) {
+        stage.style.transform = 'none';
+      }
+    },
+    { passive: true }
+  );
 
   // Update loop for 60/120 FPS camera interpolation
   function renderFrame() {
     isTicking = false;
 
-        if (prefersReducedMotion) {
+    if (prefersReducedMotion) {
       currentProgress = targetProgress;
       currentTranslateX = targetTranslateX;
 
@@ -113,7 +124,7 @@ export async function initExperienceSection() {
       }
 
       if (hudPhase) {
-        if (currentProgress < 0.30) {
+        if (currentProgress < 0.3) {
           hudPhase.textContent = 'MY JOURNEY';
         } else if (currentProgress < 0.65) {
           hudPhase.textContent = 'EXPERIENCE';
@@ -133,8 +144,10 @@ export async function initExperienceSection() {
     stage.style.transform = `translate3d(${currentTranslateX.toFixed(2)}px, 0, 0)`;
 
     // 2. Parallax Drift for Large Background Typography Dates
-    dateBgs.forEach(dateEl => {
-      const factor = parseFloat(dateEl.getAttribute('data-parallax-factor') || '0.15');
+    dateBgs.forEach((dateEl) => {
+      const factor = parseFloat(
+        dateEl.getAttribute('data-parallax-factor') || '0.15'
+      );
       const dateOffset = -currentTranslateX * factor;
       dateEl.style.transform = `translate3d(${dateOffset.toFixed(2)}px, 0, 0)`;
     });
@@ -154,9 +167,9 @@ export async function initExperienceSection() {
       hudProgress.style.width = `${(currentProgress * 100).toFixed(1)}%`;
     }
 
-        // 5. Update HUD Phase Title
+    // 5. Update HUD Phase Title
     if (hudPhase) {
-      if (currentProgress < 0.30) {
+      if (currentProgress < 0.3) {
         hudPhase.textContent = 'MY JOURNEY';
       } else if (currentProgress < 0.65) {
         hudPhase.textContent = 'EXPERIENCE';
@@ -166,9 +179,11 @@ export async function initExperienceSection() {
     }
 
     // 6. Highlight active bottom jump button
-    jumpButtons.forEach(btn => {
-      const btnTarget = parseFloat(btn.getAttribute('data-target-progress') || '0');
-      const isCurrent = Math.abs(currentProgress - btnTarget) < 0.20;
+    jumpButtons.forEach((btn) => {
+      const btnTarget = parseFloat(
+        btn.getAttribute('data-target-progress') || '0'
+      );
+      const isCurrent = Math.abs(currentProgress - btnTarget) < 0.2;
       if (isCurrent) {
         btn.classList.add('text-white', 'bg-white/20', 'border-white/40');
         btn.classList.remove('text-neutral-500', 'border-white/5');
@@ -179,7 +194,10 @@ export async function initExperienceSection() {
     });
 
     // Keep loop active until settle
-    if (Math.abs(targetTranslateX - currentTranslateX) > 0.1 || Math.abs(targetProgress - currentProgress) > 0.001) {
+    if (
+      Math.abs(targetTranslateX - currentTranslateX) > 0.1 ||
+      Math.abs(targetProgress - currentProgress) > 0.001
+    ) {
       requestAnimationFrame(renderFrame);
       isTicking = true;
     }
@@ -211,7 +229,7 @@ export async function initExperienceSection() {
   }
 
   // Interactive Chapter Jump Click Handlers
-  jumpButtons.forEach(btn => {
+  jumpButtons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const p = parseFloat(btn.getAttribute('data-target-progress') || '0');
@@ -220,7 +238,7 @@ export async function initExperienceSection() {
 
       window.scrollTo({
         top: targetScroll,
-        behavior: 'smooth'
+        behavior: 'smooth',
       });
     });
   });

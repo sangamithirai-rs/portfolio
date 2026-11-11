@@ -17,10 +17,14 @@ export function initScrollExpandMedia() {
   const ASPECT_RATIO = 1024 / 546; // ≈ 1.875457875
 
   let isMobile = window.innerWidth < 768;
-  window.addEventListener('resize', () => {
-    isMobile = window.innerWidth < 768;
-    renderFrame();
-  }, { passive: true });
+  window.addEventListener(
+    'resize',
+    () => {
+      isMobile = window.innerWidth < 768;
+      renderFrame();
+    },
+    { passive: true }
+  );
 
   let rafScheduled = false;
 
@@ -31,7 +35,7 @@ export function initScrollExpandMedia() {
 
     // Fully expanded size matching the image aspect ratio (1024 / 546)
     const maxWByViewport = window.innerWidth * 0.94;
-    const maxWByHeight = (window.innerHeight * 0.86) * ASPECT_RATIO;
+    const maxWByHeight = window.innerHeight * 0.86 * ASPECT_RATIO;
     const endW = Math.min(maxWByViewport, maxWByHeight);
     const endH = endW / ASPECT_RATIO;
 
@@ -65,7 +69,9 @@ export function initScrollExpandMedia() {
 
     // Media overlay contrast
     if (mediaOverlay) {
-      mediaOverlay.style.opacity = Math.max(0.3, 0.8 - progress * 0.4).toFixed(3);
+      mediaOverlay.style.opacity = Math.max(0.3, 0.8 - progress * 0.4).toFixed(
+        3
+      );
     }
 
     // Title words translate outward and fade
@@ -118,7 +124,7 @@ export function initScrollExpandMedia() {
     if (scrolled > 0) {
       const rawRatio = scrolled / totalDist;
       // Complete expansion smoothly near the end of track so next section transitions immediately
-      target = Math.min(Math.max(rawRatio / 0.90, 0), 1);
+      target = Math.min(Math.max(rawRatio / 0.9, 0), 1);
     }
 
     applyFrame(target);

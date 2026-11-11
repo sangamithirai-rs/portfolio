@@ -12,7 +12,6 @@
     "strict": false,
     "noImplicitAny": false,
     "strictNullChecks": false
-  },,
+  },
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
-

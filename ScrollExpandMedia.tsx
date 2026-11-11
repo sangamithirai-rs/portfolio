@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import {
   useEffect,
@@ -7,12 +7,12 @@ import {
   ReactNode,
   TouchEvent,
   WheelEvent,
-} from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
+} from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 interface ScrollExpandMediaProps {
-  mediaType?: "video" | "image";
+  mediaType?: 'video' | 'image';
   mediaSrc: string;
   posterSrc?: string;
   bgImageSrc: string;
@@ -24,7 +24,7 @@ interface ScrollExpandMediaProps {
 }
 
 const ScrollExpandMedia = ({
-  mediaType = "image",
+  mediaType = 'image',
   mediaSrc,
   posterSrc,
   bgImageSrc,
@@ -58,7 +58,7 @@ const ScrollExpandMedia = ({
         const scrollDelta = e.deltaY * 0.0009;
         const newProgress = Math.min(
           Math.max(scrollProgress + scrollDelta, 0),
-          1,
+          1
         );
         setScrollProgress(newProgress);
 
@@ -90,7 +90,7 @@ const ScrollExpandMedia = ({
         const scrollDelta = deltaY * scrollFactor;
         const newProgress = Math.min(
           Math.max(scrollProgress + scrollDelta, 0),
-          1,
+          1
         );
         setScrollProgress(newProgress);
 
@@ -115,37 +115,37 @@ const ScrollExpandMedia = ({
       }
     };
 
-    window.addEventListener("wheel", handleWheel as unknown as EventListener, {
+    window.addEventListener('wheel', handleWheel as unknown as EventListener, {
       passive: false,
     });
-    window.addEventListener("scroll", handleScroll as EventListener);
+    window.addEventListener('scroll', handleScroll as EventListener);
     window.addEventListener(
-      "touchstart",
+      'touchstart',
       handleTouchStart as unknown as EventListener,
-      { passive: false },
+      { passive: false }
     );
     window.addEventListener(
-      "touchmove",
+      'touchmove',
       handleTouchMove as unknown as EventListener,
-      { passive: false },
+      { passive: false }
     );
-    window.addEventListener("touchend", handleTouchEnd as EventListener);
+    window.addEventListener('touchend', handleTouchEnd as EventListener);
 
     return () => {
       window.removeEventListener(
-        "wheel",
-        handleWheel as unknown as EventListener,
+        'wheel',
+        handleWheel as unknown as EventListener
       );
-      window.removeEventListener("scroll", handleScroll as EventListener);
+      window.removeEventListener('scroll', handleScroll as EventListener);
       window.removeEventListener(
-        "touchstart",
-        handleTouchStart as unknown as EventListener,
+        'touchstart',
+        handleTouchStart as unknown as EventListener
       );
       window.removeEventListener(
-        "touchmove",
-        handleTouchMove as unknown as EventListener,
+        'touchmove',
+        handleTouchMove as unknown as EventListener
       );
-      window.removeEventListener("touchend", handleTouchEnd as EventListener);
+      window.removeEventListener('touchend', handleTouchEnd as EventListener);
     };
   }, [scrollProgress, mediaFullyExpanded, touchStartY]);
 
@@ -155,17 +155,17 @@ const ScrollExpandMedia = ({
     };
 
     checkIfMobile();
-    window.addEventListener("resize", checkIfMobile);
+    window.addEventListener('resize', checkIfMobile);
 
-    return () => window.removeEventListener("resize", checkIfMobile);
+    return () => window.removeEventListener('resize', checkIfMobile);
   }, []);
 
   const mediaWidth = 300 + scrollProgress * (isMobileState ? 650 : 1250);
   const mediaHeight = 400 + scrollProgress * (isMobileState ? 200 : 400);
   const textTranslateX = scrollProgress * (isMobileState ? 180 : 150);
 
-  const firstWord = title ? title.split(" ")[0] : "";
-  const restOfTitle = title ? title.split(" ").slice(1).join(" ") : "";
+  const firstWord = title ? title.split(' ')[0] : '';
+  const restOfTitle = title ? title.split(' ').slice(1).join(' ') : '';
 
   return (
     <div
@@ -187,8 +187,8 @@ const ScrollExpandMedia = ({
               height={1080}
               className="w-screen h-screen"
               style={{
-                objectFit: "cover",
-                objectPosition: "center",
+                objectFit: 'cover',
+                objectPosition: 'center',
               }}
               priority
             />
@@ -202,9 +202,9 @@ const ScrollExpandMedia = ({
                 style={{
                   width: `${mediaWidth}px`,
                   height: `${mediaHeight}px`,
-                  maxWidth: "95vw",
-                  maxHeight: "85vh",
-                  boxShadow: "0px 0px 50px rgba(0, 0, 0, 0.3)",
+                  maxWidth: '95vw',
+                  maxHeight: '85vh',
+                  boxShadow: '0px 0px 50px rgba(0, 0, 0, 0.3)',
                   backdropFilter: `blur(${(1 - scrollProgress) * 20}px)`,
                   WebkitBackdropFilter: `blur(${(1 - scrollProgress) * 20}px)`,
                   border: `1px solid rgba(255, 255, 255, ${(1 - scrollProgress) * 0.25})`,
@@ -213,7 +213,7 @@ const ScrollExpandMedia = ({
                 <div className="relative w-full h-full overflow-hidden rounded-xl">
                   <Image
                     src={mediaSrc}
-                    alt={title || "Media content"}
+                    alt={title || 'Media content'}
                     width={1280}
                     height={720}
                     className="w-full h-full object-cover rounded-xl"
@@ -253,7 +253,7 @@ const ScrollExpandMedia = ({
 
               <div
                 className={`flex items-center justify-center text-center gap-4 w-full relative z-10 transition-none flex-col ${
-                  textBlend ? "mix-blend-difference" : "mix-blend-normal"
+                  textBlend ? 'mix-blend-difference' : 'mix-blend-normal'
                 }`}
               >
                 <motion.h2

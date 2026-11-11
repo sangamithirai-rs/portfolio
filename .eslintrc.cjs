@@ -9,13 +9,10 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended'],
   rules: {
     '@typescript-eslint/no-unused-vars': 'off',
     'no-empty': 'off',
-    'no-useless-escape': 'off'
+    'no-useless-escape': 'off',
   },
 };

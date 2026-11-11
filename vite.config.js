@@ -12,4 +12,3 @@ export default defineConfig({
   // If you later add React/TSX you can enable the plugin here:
   // plugins: [require('@vitejs/plugin-react')()],
 });
-

@@ -10,24 +10,24 @@ I'm Sangamithirai RS, a Computer Science Engineering student specializing in Big
 
 ## Features
 
-* **Interactive Hero Section** — Introduction and navigation to key portfolio sections.
-* **About Section** — Background, interests, and technical focus.
-* **Experience Timeline** — Learning milestones, coursework, and project experience.
-* **Project Carousel** — Showcases selected projects.
-* **My Work Section** — Visual presentation of projects.
-* **Interests Section** — Areas of technology I'm exploring.
-* **Contact Form** — Allows visitors to send messages.
-* **Responsive Navigation** — Navigation for desktop and mobile devices.
-* **Interactive Animations** — Scroll-based effects and WebGL elements.
+- **Interactive Hero Section** — Introduction and navigation to key portfolio sections.
+- **About Section** — Background, interests, and technical focus.
+- **Experience Timeline** — Learning milestones, coursework, and project experience.
+- **Project Carousel** — Showcases selected projects.
+- **My Work Section** — Visual presentation of projects.
+- **Interests Section** — Areas of technology I'm exploring.
+- **Contact Form** — Allows visitors to send messages.
+- **Responsive Navigation** — Navigation for desktop and mobile devices.
+- **Interactive Animations** — Scroll-based effects and WebGL elements.
 
 ## Tech Stack
 
-* HTML5
-* CSS3
-* Tailwind CSS
-* JavaScript ES Modules
-* OGL / WebGL
-* Python HTTP Server
+- HTML5
+- CSS3
+- Tailwind CSS
+- JavaScript ES Modules
+- OGL / WebGL
+- Python HTTP Server
 
 ## Featured Projects
 
@@ -59,18 +59,18 @@ A backend development project exploring TypeScript, Supabase, and PostgreSQL.
 
 ## Areas of Interest
 
-* Cybersecurity
-* Generative AI
-* Software Engineering
-* Full-Stack Development
-* Cloud Technologies
+- Cybersecurity
+- Generative AI
+- Software Engineering
+- Full-Stack Development
+- Cloud Technologies
 
 ## Run Locally
 
 ### Prerequisites
 
-* Git
-* Python 3 or Node.js
+- Git
+- Python 3 or Node.js
 
 ### Steps
 
@@ -102,8 +102,8 @@ A backend development project exploring TypeScript, Supabase, and PostgreSQL.
 
 ## Connect
 
-* **GitHub:** [sangamithirai-rs](https://github.com/sangamithirai-rs)
-* **LinkedIn:** [Sangamithirai RS](https://www.linkedin.com/in/sangamithirai-rs)
+- **GitHub:** [sangamithirai-rs](https://github.com/sangamithirai-rs)
+- **LinkedIn:** [Sangamithirai RS](https://www.linkedin.com/in/sangamithirai-rs)
 
 ## Credits and License
 

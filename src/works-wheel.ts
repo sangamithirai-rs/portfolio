@@ -33,52 +33,71 @@ function place(ringDeg, drumDeg, ringR, drumR, bow, m) {
   );
 }
 
-
 export const DEFAULT_WORKS = [
   {
-    title: "Afterglow",
-    subtitle: "Privacy-First Personal Experience Platform",
-    description: "A platform for creating, preserving, and sharing personal experiences, featuring Google authentication, photo storage, and private, unlisted, and invite-only access.",
-    image: "Landing Page Assest/Screenshot 2026-10-24 122131.png",
-    src: "Landing Page Assest/Screenshot 2026-10-24 122131.png",
-    href: "https://github.com/sangamithirai-rs/Afterglow",
-    stats: "Personal Project • Privacy-Focused Sharing • Experience Management",
-    tools: ["React", "TypeScript", "Tailwind CSS", "Supabase"],
-    deliverables: ["Experience Creation and Editing", "Access Control and Invitations", "Authentication and Photo Storage"]
+    title: 'Afterglow',
+    subtitle: 'Privacy-First Personal Experience Platform',
+    description:
+      'A platform for creating, preserving, and sharing personal experiences, featuring Google authentication, photo storage, and private, unlisted, and invite-only access.',
+    image: 'Landing Page Assest/Screenshot 2026-10-24 122131.png',
+    src: 'Landing Page Assest/Screenshot 2026-10-24 122131.png',
+    href: 'https://github.com/sangamithirai-rs/Afterglow',
+    stats: 'Personal Project • Privacy-Focused Sharing • Experience Management',
+    tools: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase'],
+    deliverables: [
+      'Experience Creation and Editing',
+      'Access Control and Invitations',
+      'Authentication and Photo Storage',
+    ],
   },
   {
-    title: "Tab Zero",
-    subtitle: "Productivity-Focused New Tab Experience",
-    description: "A personal project exploring a more focused and intentional browser new-tab experience through interface design and web development.",
-    image: "Landing Page Assest/Screenshot 2026-10-24 121245.png",
-    src: "Landing Page Assest/Screenshot 2026-10-24 121245.png",
-    href: "https://github.com/sangamithirai-rs/tab-zero",
-    stats: "Personal Project • Productivity • Web Development",
-    tools: ["React", "JavaScript", "CSS", "Vite"],
-    deliverables: ["New Tab Interface", "Productivity-Focused Design", "Interactive Web Experience"]
+    title: 'Tab Zero',
+    subtitle: 'Productivity-Focused New Tab Experience',
+    description:
+      'A personal project exploring a more focused and intentional browser new-tab experience through interface design and web development.',
+    image: 'Landing Page Assest/Screenshot 2026-10-24 121245.png',
+    src: 'Landing Page Assest/Screenshot 2026-10-24 121245.png',
+    href: 'https://github.com/sangamithirai-rs/tab-zero',
+    stats: 'Personal Project • Productivity • Web Development',
+    tools: ['React', 'JavaScript', 'CSS', 'Vite'],
+    deliverables: [
+      'New Tab Interface',
+      'Productivity-Focused Design',
+      'Interactive Web Experience',
+    ],
   },
   {
-    title: "AWAKEN",
-    subtitle: "Gamified Productivity RPG Concept",
-    description: "A concept for a productivity application inspired by role-playing games, combining quests, personal attributes, and progress tracking to encourage consistent self-improvement.",
-    image: "Landing Page Assest/Screenshot 2026-10-24 114331.png",
-    src: "Landing Page Assest/Screenshot 2026-10-24 114331.png",
-    href: "https://github.com/sangamithirai-rs",
-    stats: "Concept • Quest-Based Progression • Personal Development",
-    tools: ["UI/UX Design", "Product Design", "Application Development"],
-    deliverables: ["Quest Board Concept", "Character Attribute System", "Gamified Productivity Experience"]
+    title: 'AWAKEN',
+    subtitle: 'Gamified Productivity RPG Concept',
+    description:
+      'A concept for a productivity application inspired by role-playing games, combining quests, personal attributes, and progress tracking to encourage consistent self-improvement.',
+    image: 'Landing Page Assest/Screenshot 2026-10-24 114331.png',
+    src: 'Landing Page Assest/Screenshot 2026-10-24 114331.png',
+    href: 'https://github.com/sangamithirai-rs',
+    stats: 'Concept • Quest-Based Progression • Personal Development',
+    tools: ['UI/UX Design', 'Product Design', 'Application Development'],
+    deliverables: [
+      'Quest Board Concept',
+      'Character Attribute System',
+      'Gamified Productivity Experience',
+    ],
   },
   {
-    title: "YARUKI",
-    subtitle: "Backend Development in Progress",
-    description: "An ongoing backend project exploring server-side development, database integration, and application data management.",
-    image: "Landing Page Assest/Screenshot 2026-10-24 122216.png",
-    src: "Landing Page Assest/Screenshot 2026-10-24 122216.png",
-    href: "https://github.com/sangamithirai-rs",
-    stats: "In Development • Backend Engineering • Database Integration",
-    tools: ["TypeScript", "Supabase", "PostgreSQL"],
-    deliverables: ["Backend Development", "Database Integration", "Application Data Management"]
-  }
+    title: 'YARUKI',
+    subtitle: 'Backend Development in Progress',
+    description:
+      'An ongoing backend project exploring server-side development, database integration, and application data management.',
+    image: 'Landing Page Assest/Screenshot 2026-10-24 122216.png',
+    src: 'Landing Page Assest/Screenshot 2026-10-24 122216.png',
+    href: 'https://github.com/sangamithirai-rs',
+    stats: 'In Development • Backend Engineering • Database Integration',
+    tools: ['TypeScript', 'Supabase', 'PostgreSQL'],
+    deliverables: [
+      'Backend Development',
+      'Database Integration',
+      'Application Data Management',
+    ],
+  },
 ];
 
 export function initWorksWheel(container, options = {}) {
@@ -86,7 +105,7 @@ export function initWorksWheel(container, options = {}) {
 
   const items = options.items || DEFAULT_WORKS;
   const label = options.label || "Works '26";
-  const action = options.action !== undefined ? options.action : "View";
+  const action = options.action !== undefined ? options.action : 'View';
   const onSelect = options.onSelect || null;
 
   const count = items.length;
@@ -95,63 +114,79 @@ export function initWorksWheel(container, options = {}) {
   let turn = 0;
   let target = 0;
   let active = 0;
-  let stage = { w: container.clientWidth || 800, h: container.clientHeight || 600 };
-  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let stage = {
+    w: container.clientWidth || 800,
+    h: container.clientHeight || 600,
+  };
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   // Build DOM Structure
-  container.innerHTML = "";
-  container.classList.add("relative", "w-full", "h-full", "overflow-hidden", "select-none");
+  container.innerHTML = '';
+  container.classList.add(
+    'relative',
+    'w-full',
+    'h-full',
+    'overflow-hidden',
+    'select-none'
+  );
 
-  const section = document.createElement("section");
-  section.setAttribute("aria-label", label);
-  section.className = "relative w-full h-full min-h-[24rem] overflow-hidden select-none bg-transparent text-neutral-900";
+  const section = document.createElement('section');
+  section.setAttribute('aria-label', label);
+  section.className =
+    'relative w-full h-full min-h-[24rem] overflow-hidden select-none bg-transparent text-neutral-900';
 
   // Stage (perspective container)
-  const stageEl = document.createElement("div");
+  const stageEl = document.createElement('div');
   stageEl.tabIndex = 0;
-  stageEl.role = "listbox";
-  stageEl.setAttribute("aria-label", label);
-  stageEl.className = "absolute inset-0 cursor-grab touch-pan-x outline-none focus-visible:outline-2 focus-visible:outline-neutral-900 focus-visible:-outline-offset-4 active:cursor-grabbing";
+  stageEl.role = 'listbox';
+  stageEl.setAttribute('aria-label', label);
+  stageEl.className =
+    'absolute inset-0 cursor-grab touch-pan-x outline-none focus-visible:outline-2 focus-visible:outline-neutral-900 focus-visible:-outline-offset-4 active:cursor-grabbing';
 
   // Wheel (preserve-3d anchor)
-  const wheelEl = document.createElement("div");
-  wheelEl.className = "absolute top-1/2 left-1/2 pointer-events-none";
-  wheelEl.style.pointerEvents = "none";
-  wheelEl.style.transformStyle = "preserve-3d";
+  const wheelEl = document.createElement('div');
+  wheelEl.className = 'absolute top-1/2 left-1/2 pointer-events-none';
+  wheelEl.style.pointerEvents = 'none';
+  wheelEl.style.transformStyle = 'preserve-3d';
 
   // Cards
   const cardRefs = [];
   items.forEach((item, i) => {
-    const card = document.createElement("div");
+    const card = document.createElement('div');
     card.id = `works-wheel-${i}`;
-    card.role = "option";
-    card.setAttribute("aria-selected", i === 0 ? "true" : "false");
-    card.className = "group absolute cursor-pointer pointer-events-auto [backface-visibility:hidden]";
-    card.style.transformStyle = "preserve-3d";
-    card.style.willChange = "transform, opacity";
+    card.role = 'option';
+    card.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+    card.className =
+      'group absolute cursor-pointer pointer-events-auto [backface-visibility:hidden]';
+    card.style.transformStyle = 'preserve-3d';
+    card.style.willChange = 'transform, opacity';
 
-    const face = document.createElement("div");
-    face.className = "relative block w-full h-full overflow-hidden rounded-2xl bg-white border border-neutral-300/80 shadow-[0_20px_45px_-15px_rgba(0,0,0,0.12),0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 hover:shadow-[0_28px_50px_-10px_rgba(0,0,0,0.22)] hover:border-neutral-500";
-    face.style.willChange = "transform";
-    face.style.transformOrigin = "center center";
+    const face = document.createElement('div');
+    face.className =
+      'relative block w-full h-full overflow-hidden rounded-2xl bg-white border border-neutral-300/80 shadow-[0_20px_45px_-15px_rgba(0,0,0,0.12),0_4px_12px_rgba(0,0,0,0.06)] transition-all duration-300 hover:shadow-[0_28px_50px_-10px_rgba(0,0,0,0.22)] hover:border-neutral-500';
+    face.style.willChange = 'transform';
+    face.style.transformOrigin = 'center center';
 
-    const img = document.createElement("img");
+    const img = document.createElement('img');
     img.src = item.image;
     img.alt = item.title;
     img.draggable = false;
-    img.className = "w-full h-full object-cover select-none pointer-events-none";
-    img.loading = "eager";
+    img.className =
+      'w-full h-full object-cover select-none pointer-events-none';
+    img.loading = 'eager';
 
     face.appendChild(img);
 
     // Subtle gradient overlay for card readability
-    const gradientOverlay = document.createElement("div");
-    gradientOverlay.className = "pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent";
+    const gradientOverlay = document.createElement('div');
+    gradientOverlay.className =
+      'pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent';
     face.appendChild(gradientOverlay);
 
     // Bottom subtle info badge on card
-    const cardInfo = document.createElement("div");
-    cardInfo.className = "pointer-events-none absolute left-3.5 bottom-3.5 right-3.5 flex items-center justify-between";
+    const cardInfo = document.createElement('div');
+    cardInfo.className =
+      'pointer-events-none absolute left-3.5 bottom-3.5 right-3.5 flex items-center justify-between';
     cardInfo.innerHTML = `
       <span class="text-[11px] font-mono tracking-wider text-white drop-shadow-sm font-semibold truncate max-w-[70%]">
         ${item.title}
@@ -164,9 +199,9 @@ export function initWorksWheel(container, options = {}) {
 
     card.appendChild(face);
 
-    card.style.pointerEvents = "auto";
-    card.style.cursor = "pointer";
-    card.addEventListener("click", (event) => {
+    card.style.pointerEvents = 'auto';
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', (event) => {
       if (dragDelta > 6) return;
 
       event.preventDefault();
@@ -174,7 +209,7 @@ export function initWorksWheel(container, options = {}) {
 
       if (onSelect) {
         onSelect(i, item);
-      } else if (typeof window.openProjectModal === "function") {
+      } else if (typeof window.openProjectModal === 'function') {
         window.openProjectModal(item);
       } else if (item.href) {
         window.location.href = item.href;
@@ -189,32 +224,37 @@ export function initWorksWheel(container, options = {}) {
   section.appendChild(stageEl);
 
   // Center ring label ("Works '26" or "Landing Pages")
-  const labelEl = document.createElement("div");
-  labelEl.className = "pointer-events-none absolute inset-0 grid place-items-center tracking-tight font-black uppercase text-center text-neutral-900 select-none z-10 transition-opacity duration-300";
+  const labelEl = document.createElement('div');
+  labelEl.className =
+    'pointer-events-none absolute inset-0 grid place-items-center tracking-tight font-black uppercase text-center text-neutral-900 select-none z-10 transition-opacity duration-300';
   labelEl.textContent = label;
   section.appendChild(labelEl);
 
   // Front-card title
-  const titleEl = document.createElement("div");
-  titleEl.className = "pointer-events-none absolute top-1/2 left-[5%] md:left-[7%] -translate-y-1/2 tracking-tight font-black uppercase text-neutral-900 opacity-0 select-none z-10 max-w-[42%] leading-[1.05]";
-  titleEl.textContent = items[0] ? items[0].title : "";
+  const titleEl = document.createElement('div');
+  titleEl.className =
+    'pointer-events-none absolute top-1/2 left-[5%] md:left-[7%] -translate-y-1/2 tracking-tight font-black uppercase text-neutral-900 opacity-0 select-none z-10 max-w-[42%] leading-[1.05]';
+  titleEl.textContent = items[0] ? items[0].title : '';
   section.appendChild(titleEl);
 
   // Side Index List
-  const indexList = document.createElement("ol");
-  indexList.className = "text-neutral-500 absolute top-[7%] right-[3%] text-right leading-[1.75] z-20 space-y-0.5 select-none font-mono";
+  const indexList = document.createElement('ol');
+  indexList.className =
+    'text-neutral-500 absolute top-[7%] right-[3%] text-right leading-[1.75] z-20 space-y-0.5 select-none font-mono';
   const indexButtons = [];
 
   items.forEach((item, i) => {
-    const li = document.createElement("li");
-    const btn = document.createElement("button");
-    btn.type = "button";
+    const li = document.createElement('li');
+    const btn = document.createElement('button');
+    btn.type = 'button';
     btn.textContent = item.title;
-    btn.className = "cursor-pointer transition-all duration-200 text-[11px] md:text-xs tracking-wider outline-none text-neutral-400 hover:text-neutral-900 block ml-auto";
+    btn.className =
+      'cursor-pointer transition-all duration-200 text-[11px] md:text-xs tracking-wider outline-none text-neutral-400 hover:text-neutral-900 block ml-auto';
     if (i === 0) {
-      btn.className = "cursor-pointer transition-all duration-200 text-[11px] md:text-xs tracking-wider outline-none text-neutral-900 font-bold block ml-auto underline decoration-2 underline-offset-4";
+      btn.className =
+        'cursor-pointer transition-all duration-200 text-[11px] md:text-xs tracking-wider outline-none text-neutral-900 font-bold block ml-auto underline decoration-2 underline-offset-4';
     }
-    btn.addEventListener("click", () => {
+    btn.addEventListener('click', () => {
       to(i + 1);
     });
     li.appendChild(btn);
@@ -224,8 +264,9 @@ export function initWorksWheel(container, options = {}) {
   section.appendChild(indexList);
 
   // Bottom helper pill
-  const hintPill = document.createElement("div");
-  hintPill.className = "pointer-events-none absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-neutral-200 shadow-sm backdrop-blur-md text-[10px] md:text-[11px] font-mono text-neutral-600 uppercase tracking-wider";
+  const hintPill = document.createElement('div');
+  hintPill.className =
+    'pointer-events-none absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-neutral-200 shadow-sm backdrop-blur-md text-[10px] md:text-[11px] font-mono text-neutral-600 uppercase tracking-wider';
   hintPill.innerHTML = `
     <svg class="w-3 h-3 text-neutral-500 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
       <path d="M19 14l-7 7m0 0l-7-7m7 7V3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -307,7 +348,7 @@ export function initWorksWheel(container, options = {}) {
       to(Math.round(target));
     }, SETTLE);
   };
-  stageEl.addEventListener("wheel", onWheel, { passive: false });
+  stageEl.addEventListener('wheel', onWheel, { passive: false });
 
   // Pointer drag interaction
   let isPointerDown = false;
@@ -316,7 +357,7 @@ export function initWorksWheel(container, options = {}) {
   let dragPointerId = null;
   let hasCapturedPointer = false;
 
-  stageEl.addEventListener("pointerdown", (event) => {
+  stageEl.addEventListener('pointerdown', (event) => {
     isPointerDown = true;
     dragStartY = event.clientY;
     dragDelta = 0;
@@ -324,7 +365,7 @@ export function initWorksWheel(container, options = {}) {
     hasCapturedPointer = false;
   });
 
-  stageEl.addEventListener("pointermove", (event) => {
+  stageEl.addEventListener('pointermove', (event) => {
     if (!isPointerDown) return;
     const diff = dragStartY - event.clientY;
     dragDelta += Math.abs(diff);
@@ -349,15 +390,15 @@ export function initWorksWheel(container, options = {}) {
     }
   };
 
-  stageEl.addEventListener("pointerup", endDrag);
-  stageEl.addEventListener("pointercancel", endDrag);
+  stageEl.addEventListener('pointerup', endDrag);
+  stageEl.addEventListener('pointercancel', endDrag);
 
   // Keyboard navigation
-  stageEl.addEventListener("keydown", (event) => {
-    if (event.key === "ArrowDown" || event.key === "ArrowRight") {
+  stageEl.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
       event.preventDefault();
       to(Math.round(target) + 1);
-    } else if (event.key === "ArrowUp" || event.key === "ArrowLeft") {
+    } else if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
       event.preventDefault();
       to(Math.round(target) - 1);
     }
@@ -365,22 +406,24 @@ export function initWorksWheel(container, options = {}) {
 
   // UI Active State Update
   function updateActiveUI(near) {
-    stageEl.setAttribute("aria-activedescendant", `works-wheel-${near}`);
+    stageEl.setAttribute('aria-activedescendant', `works-wheel-${near}`);
     cardRefs.forEach((card, idx) => {
-      card.setAttribute("aria-selected", idx === near ? "true" : "false");
+      card.setAttribute('aria-selected', idx === near ? 'true' : 'false');
     });
 
     indexButtons.forEach((btn, idx) => {
       if (idx === near) {
-        btn.className = "cursor-pointer transition-all duration-200 text-[11px] md:text-xs tracking-wider outline-none text-neutral-900 font-bold block ml-auto scale-105 underline decoration-2 underline-offset-4";
+        btn.className =
+          'cursor-pointer transition-all duration-200 text-[11px] md:text-xs tracking-wider outline-none text-neutral-900 font-bold block ml-auto scale-105 underline decoration-2 underline-offset-4';
       } else {
-        btn.className = "cursor-pointer transition-all duration-200 text-[11px] md:text-xs tracking-wider outline-none text-neutral-400 hover:text-neutral-900 block ml-auto";
+        btn.className =
+          'cursor-pointer transition-all duration-200 text-[11px] md:text-xs tracking-wider outline-none text-neutral-400 hover:text-neutral-900 block ml-auto';
       }
     });
 
-    const counter = document.getElementById("works-wheel-counter");
+    const counter = document.getElementById('works-wheel-counter');
     if (counter) {
-      counter.textContent = `${String(near + 1).padStart(2, "0")} / ${String(count).padStart(2, "0")}`;
+      counter.textContent = `${String(near + 1).padStart(2, '0')} / ${String(count).padStart(2, '0')}`;
     }
 
     if (items[near]) {
@@ -426,7 +469,7 @@ export function initWorksWheel(container, options = {}) {
           bow,
           m
         );
-        card.style.opacity = m > 0.5 && Math.abs(d) > CULL ? "0" : "1";
+        card.style.opacity = m > 0.5 && Math.abs(d) > CULL ? '0' : '1';
         card.style.zIndex = String(Math.round(100 - Math.abs(d) * 2));
       }
       const face = card ? card.firstElementChild : null;
@@ -456,8 +499,8 @@ export function initWorksWheel(container, options = {}) {
       isRunning = false;
       cancelAnimationFrame(frameId);
       ro.disconnect();
-      stageEl.removeEventListener("wheel", onWheel);
+      stageEl.removeEventListener('wheel', onWheel);
       clearTimeout(settlingTimer);
-    }
+    },
   };
 }
