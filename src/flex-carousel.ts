@@ -13,7 +13,7 @@ export const photo = (id) =>
 
 export const DEFAULT_ITEMS = [
   {
-    src: 'Project Images/afterglow.png',
+    src: 'project-images/afterglow.png',
     alt: 'Afterglow',
     title: 'Afterglow',
     subtitle: 'A Private Space for Personal Experiences',
@@ -22,7 +22,7 @@ export const DEFAULT_ITEMS = [
     link: 'https://afterglow-puce.vercel.app/',
   },
   {
-    src: 'Project Images/tab-zero.png',
+    src: 'project-images/tab-zero.png',
     alt: 'Tab Zero',
     title: 'Tab Zero',
     subtitle: 'A Productivity-Focused New Tab Experience',
@@ -31,7 +31,7 @@ export const DEFAULT_ITEMS = [
     link: 'https://tab-zero-smoky.vercel.app/',
   },
   {
-    src: 'Project Images/awaken.png',
+    src: 'project-images/awaken.png',
     alt: 'AWAKEN',
     title: 'AWAKEN',
     subtitle: 'A Productivity RPG Concept',
@@ -40,7 +40,7 @@ export const DEFAULT_ITEMS = [
     link: 'https://github.com/sangamithirai-rs',
   },
   {
-    src: 'Project Images/yaruki.png',
+    src: 'project-images/yaruki.png',
     alt: 'YARUKI',
     title: 'YARUKI',
     subtitle: 'Backend Development in Progress',

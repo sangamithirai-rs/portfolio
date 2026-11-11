@@ -139,7 +139,7 @@ const photo = (id: string) =>
 
 export const DEFAULT_ITEMS: FlexCarouselItem[] = [
   {
-    src: 'Project Images/Cafe Website.png',
+    src: 'project-images/Cafe Website.png',
     alt: 'Cafe Website',
     title: 'Cafe Website',
     subtitle: 'Editorial Coffee House Experience',
@@ -148,7 +148,7 @@ export const DEFAULT_ITEMS: FlexCarouselItem[] = [
     link: 'https://mochaandmiso.web.app/',
   },
   {
-    src: 'Project Images/Design Studio.png',
+    src: 'project-images/Design Studio.png',
     alt: 'Design Studio',
     title: 'Design Studio',
     subtitle: 'Creative Agency & Brand Identity',
@@ -157,7 +157,7 @@ export const DEFAULT_ITEMS: FlexCarouselItem[] = [
     link: 'https://echo-design-studio-ex.vercel.app/',
   },
   {
-    src: 'Project Images/Photographer Portfolio.png',
+    src: 'project-images/Photographer Portfolio.png',
     alt: 'Photographer Portfolio',
     title: 'Photographer Portfolio',
     subtitle: 'Editorial & Analog Photography',
@@ -166,7 +166,7 @@ export const DEFAULT_ITEMS: FlexCarouselItem[] = [
     link: 'https://julianvance.vercel.app/',
   },
   {
-    src: 'Project Images/Portfolio Design.png',
+    src: 'project-images/Portfolio Design.png',
     alt: 'Portfolio Design',
     title: 'Portfolio Design',
     subtitle: 'Minimalist Creative Developer Portfolio',
@@ -175,7 +175,7 @@ export const DEFAULT_ITEMS: FlexCarouselItem[] = [
     link: 'https://echooo.web.app/',
   },
   {
-    src: 'Project Images/Portfolio Website.png',
+    src: 'project-images/Portfolio Website.png',
     alt: 'Portfolio Website',
     title: 'Portfolio Website',
     subtitle: 'Personal Developer & Designer Portfolio',
@@ -184,7 +184,7 @@ export const DEFAULT_ITEMS: FlexCarouselItem[] = [
     link: 'https://jishnumondal.vercel.app/',
   },
   {
-    src: 'Project Images/Sen Cruzo-Client Portfolio.png',
+    src: 'project-images/Sen Cruzo-Client Portfolio.png',
     alt: 'Sen Cruzo',
     title: 'Sen Cruzo',
     subtitle: 'Luxury Architectural & Client Portfolio',
