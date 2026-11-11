@@ -96,7 +96,7 @@ export function initWorksWheel(container, options = {}) {
   let target = 0;
   let active = 0;
   let stage = { w: container.clientWidth || 800, h: container.clientHeight || 600 };
-  let reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // Build DOM Structure
   container.innerHTML = "";

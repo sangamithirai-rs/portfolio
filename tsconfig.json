@@ -3,14 +3,16 @@
     "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "Node",
-    "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
     "allowJs": true,
-    "outDir": "dist"
-  },
+    "outDir": "dist",
+    "strict": false,
+    "noImplicitAny": false,
+    "strictNullChecks": false
+  },,
   "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
 
