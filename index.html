@@ -12,8 +12,21 @@
     <meta name="theme-color" content="#FAFAFA" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <!-- Open Graph / social sharing (add og:image and og:url once the site URL is final) -->
+    <!-- Open Graph / social sharing -->
+    <link rel="canonical" href="https://sangamithirai-rs.vercel.app/" />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sangamithirai-rs.vercel.app/" />
+    <meta property="og:site_name" content="MIRA | Sangamithirai RS" />
+    <meta
+      property="og:image"
+      content="https://sangamithirai-rs.vercel.app/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="MIRA, the portfolio of Sangamithirai RS"
+    />
     <meta property="og:title" content="MIRA | Sangamithirai RS" />
     <meta
       property="og:description"
@@ -21,30 +34,10 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="MIRA | Sangamithirai RS" />
-
-    <!-- Tailwind CSS v3 with Plugins -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
-            },
-            colors: {
-              brand: {
-                black: '#0D0D0D',
-                dark: '#141414',
-                gray: '#7A7A7A',
-                light: '#F8F9FA',
-                border: '#E5E5E5',
-              },
-            },
-          },
-        },
-      };
-    </script>
+    <meta
+      name="twitter:image"
+      content="https://sangamithirai-rs.vercel.app/og-image.png"
+    />
 
     <!-- Typography & Gradients Stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -247,6 +240,8 @@
         opacity: 1;
       }
     </style>
+    <!-- Tailwind CSS (built at build time; loads after inline styles to keep utility precedence) -->
+    <link rel="stylesheet" href="/src/styles.css" />
   </head>
   <body class="antialiased text-[#111] bg-[#FAFAFA]">
     <!-- Notification Toast Container -->

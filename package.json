@@ -9,25 +9,29 @@
     "build": "vite build",
     "preview": "vite preview",
     "start": "vite preview",
-    "lint": "eslint . --ext .js,.ts,.tsx",
-    "lint:fix": "eslint . --ext .js,.ts,.tsx --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "optimize-images": "imagemin assets/* --out-dir=assets --plugin=imagemin-mozjpeg --plugin=imagemin-pngquant"
+    "typecheck": "tsc --noEmit",
+    "optimize-images": "node scripts/optimize-images.js"
   },
   "dependencies": {
-    "@fiddle-digital/string-tune": "^1.2.0",
-    "glob": "^14.0.4"
+    "@fiddle-digital/string-tune": "^1.2.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
-    "eslint": "^8.57.1",
-    "imagemin-cli": "^8.0.0",
-    "imagemin-mozjpeg": "^10.0.0",
-    "imagemin-pngquant": "^10.0.0",
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/forms": "^0.5.11",
+    "autoprefixer": "^10.6.2",
+    "eslint": "^10.14.0",
+    "globals": "^17.14.0",
+    "postcss": "^8.5.32",
     "prettier": "^3.10.0",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^3.4.19",
     "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.2",
     "vite": "^8.3.8"
   },
   "allowScripts": {

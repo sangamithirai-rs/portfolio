@@ -2,6 +2,8 @@
 
 A personal developer portfolio showcasing my interests, projects, and learning journey across cybersecurity, generative AI, and software development.
 
+**Live site:** [sangamithirai-rs.vercel.app](https://sangamithirai-rs.vercel.app/)
+
 **MIRA** is customized from the open-source ECHO portfolio template created by Jishnu Mondal.
 
 ## About
@@ -22,12 +24,12 @@ I'm Sangamithirai RS, a Computer Science Engineering student specializing in Big
 
 ## Tech Stack
 
-- HTML5
-- CSS3
-- Tailwind CSS
-- JavaScript ES Modules
-- OGL / WebGL
-- Python HTTP Server
+- HTML5 and TypeScript (ES modules)
+- [Vite](https://vite.dev) for the dev server and production build
+- [Tailwind CSS](https://tailwindcss.com) 3, compiled at build time
+- OGL / WebGL and [string-tune](https://www.npmjs.com/package/@fiddle-digital/string-tune) for motion effects
+- ESLint 10, Prettier and `tsc` for code quality
+- GitHub Actions for CI, deployed on Vercel
 
 ## Featured Projects
 
@@ -70,7 +72,7 @@ A backend development project exploring TypeScript, Supabase, and PostgreSQL.
 ### Prerequisites
 
 - Git
-- Python 3 or Node.js
+- Node.js 20.19 or newer (Node 22 recommended; see `.nvmrc`)
 
 ### Steps
 
@@ -80,25 +82,34 @@ A backend development project exploring TypeScript, Supabase, and PostgreSQL.
    git clone https://github.com/sangamithirai-rs/portfolio.git
    ```
 
-2. Navigate to the project directory:
+2. Navigate to the project directory and install dependencies:
 
    ```bash
    cd portfolio
+   npm install
    ```
 
-3. Start the local server.
-
-   If Python is installed:
+3. Start the dev server:
 
    ```bash
-   python -m http.server 8080
+   npm run dev
    ```
 
-4. Open the following address in your browser:
+4. Open `http://localhost:5173` in your browser.
 
-   `http://localhost:8080`
+### Scripts
 
-   If the project already includes a working `npm start` script, you can use `npm start` instead.
+| Command                   | What it does                                        |
+| ------------------------- | --------------------------------------------------- |
+| `npm run dev`             | Start the dev server                                |
+| `npm run build`           | Create a production build in `dist/`                |
+| `npm run preview`         | Preview the production build locally                |
+| `npm run lint`            | Run ESLint (`lint:fix` to auto-fix)                 |
+| `npm run typecheck`       | Type-check the TypeScript with `tsc`                |
+| `npm run format`          | Format all files (`format:check` to verify only)    |
+| `npm run optimize-images` | Convert PNG/JPEG in `assets/` and `public/` to WebP |
+
+Every push and pull request to `main` runs lint, type checking, a Prettier check and a production build through GitHub Actions.
 
 ## Connect
 

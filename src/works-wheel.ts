@@ -100,7 +100,7 @@ export const DEFAULT_WORKS = [
   },
 ];
 
-export function initWorksWheel(container, options = {}) {
+export function initWorksWheel(container, options: Record<string, any> = {}) {
   if (!container) return null;
 
   const items = options.items || DEFAULT_WORKS;

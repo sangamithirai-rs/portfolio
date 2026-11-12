@@ -254,7 +254,7 @@ void main() {
 }
 `;
 
-export function initFlexCarousel(container, options = {}) {
+export function initFlexCarousel(container, options: Record<string, any> = {}) {
   if (!container) return;
 
   const items =

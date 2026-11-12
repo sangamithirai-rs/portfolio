@@ -15,7 +15,7 @@ export async function initExperienceSection() {
   const tickerBottom = document.getElementById('exp-ticker-bottom');
   const hudProgress = document.getElementById('exp-hud-progress');
   const hudPhase = document.getElementById('exp-hud-phase');
-  const dateBgs = document.querySelectorAll('.exp-date-bg');
+  const dateBgs = document.querySelectorAll<HTMLElement>('.exp-date-bg');
   const jumpButtons = document.querySelectorAll('.exp-jump-btn');
 
   // Check reduced motion preference
