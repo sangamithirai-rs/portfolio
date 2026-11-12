@@ -39,8 +39,8 @@ export const DEFAULT_WORKS = [
     subtitle: 'Privacy-First Personal Experience Platform',
     description:
       'A platform for creating, preserving, and sharing personal experiences, featuring Google authentication, photo storage, and private, unlisted, and invite-only access.',
-    image: 'landing-page-assets/screenshot-2026-10-24-122131.png',
-    src: 'landing-page-assets/screenshot-2026-10-24-122131.png',
+    image: 'landing-page-assets/screenshot-2026-10-24-122131.webp',
+    src: 'landing-page-assets/screenshot-2026-10-24-122131.webp',
     href: 'https://github.com/sangamithirai-rs/Afterglow',
     stats: 'Personal Project • Privacy-Focused Sharing • Experience Management',
     tools: ['React', 'TypeScript', 'Tailwind CSS', 'Supabase'],
@@ -55,8 +55,8 @@ export const DEFAULT_WORKS = [
     subtitle: 'Productivity-Focused New Tab Experience',
     description:
       'A personal project exploring a more focused and intentional browser new-tab experience through interface design and web development.',
-    image: 'landing-page-assets/screenshot-2026-10-24-121245.png',
-    src: 'landing-page-assets/screenshot-2026-10-24-121245.png',
+    image: 'landing-page-assets/screenshot-2026-10-24-121245.webp',
+    src: 'landing-page-assets/screenshot-2026-10-24-121245.webp',
     href: 'https://github.com/sangamithirai-rs/tab-zero',
     stats: 'Personal Project • Productivity • Web Development',
     tools: ['React', 'JavaScript', 'CSS', 'Vite'],
@@ -71,8 +71,8 @@ export const DEFAULT_WORKS = [
     subtitle: 'Gamified Productivity RPG Concept',
     description:
       'A concept for a productivity application inspired by role-playing games, combining quests, personal attributes, and progress tracking to encourage consistent self-improvement.',
-    image: 'landing-page-assets/screenshot-2026-10-24-114331.png',
-    src: 'landing-page-assets/screenshot-2026-10-24-114331.png',
+    image: 'landing-page-assets/screenshot-2026-10-24-114331.webp',
+    src: 'landing-page-assets/screenshot-2026-10-24-114331.webp',
     href: 'https://github.com/sangamithirai-rs',
     stats: 'Concept • Quest-Based Progression • Personal Development',
     tools: ['UI/UX Design', 'Product Design', 'Application Development'],
@@ -87,8 +87,8 @@ export const DEFAULT_WORKS = [
     subtitle: 'Backend Development in Progress',
     description:
       'An ongoing backend project exploring server-side development, database integration, and application data management.',
-    image: 'landing-page-assets/screenshot-2026-10-24-122216.png',
-    src: 'landing-page-assets/screenshot-2026-10-24-122216.png',
+    image: 'landing-page-assets/screenshot-2026-10-24-122216.webp',
+    src: 'landing-page-assets/screenshot-2026-10-24-122216.webp',
     href: 'https://github.com/sangamithirai-rs',
     stats: 'In Development • Backend Engineering • Database Integration',
     tools: ['TypeScript', 'Supabase', 'PostgreSQL'],

@@ -10,6 +10,9 @@
     "preview": "vite preview",
     "start": "vite preview",
     "lint": "eslint . --ext .js,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.ts,.tsx --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "optimize-images": "imagemin assets/* --out-dir=assets --plugin=imagemin-mozjpeg --plugin=imagemin-pngquant"
   },
   "dependencies": {
@@ -29,5 +32,12 @@
   },
   "allowScripts": {
     "@parcel/watcher@2.6.0": true
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sangamithirai-rs/portfolio.git"
   }
 }
