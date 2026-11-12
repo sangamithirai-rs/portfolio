@@ -1,7 +1,0 @@
-assets/**
-
-
-dist
-node_modules
-assets/*.js
-assets/*.mjs
