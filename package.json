@@ -22,7 +22,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
-    "eslint": "^8.57.1",
+    "eslint": "^10.14.0",
     "imagemin-cli": "^8.0.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-pngquant": "^10.0.0",
