@@ -1,0 +1,25 @@
+/* Base layer: global behavior that is safe on both the legacy light sections
+   and the new dark chapters. Kept deliberately small. */
+@layer base {
+  /* Visible keyboard focus everywhere (the site previously had almost none).
+     Utilities such as focus:outline-none still win where a component styles
+     its own focus state. */
+  :focus-visible {
+    outline: 2px solid rgb(var(--c-focus));
+    outline-offset: 3px;
+  }
+
+  /* Safety net for users who prefer reduced motion: CSS transitions and
+     animations become effectively instant. JS-driven motion (WebGL, rAF)
+     checks the media query itself. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>MIRA design system (dev only)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body class="theme-dark min-h-screen">
+    <a href="#colors" class="skip-link">Skip to content</a>
+
+    <header class="container-mira pt-16 pb-10">
+      <p class="type-label">Dev only · not part of the production build</p>
+      <h1 class="type-display-md mt-4">Design <em>system</em></h1>
+      <p class="type-lead measure mt-6">
+        Tokens live in
+        <code class="font-mono text-fg">src/styles/tokens.css</code>. Existing
+        sections are unchanged; chapters adopt this system as they are restyled.
+      </p>
+      <nav class="mt-8 flex flex-wrap gap-2" aria-label="Sections">
+        <a class="chip link-line" href="#colors">Color</a>
+        <a class="chip link-line" href="#type">Typography</a>
+        <a class="chip link-line" href="#space">Spacing</a>
+        <a class="chip link-line" href="#surfaces">Surfaces</a>
+        <a class="chip link-line" href="#buttons">Buttons</a>
+        <a class="chip link-line" href="#motion">Motion</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- COLOR -->
+      <section id="colors" class="container-mira py-16">
+        <p class="type-index">01</p>
+        <h2 class="type-h1 mt-2">Color</h2>
+        <div class="rule my-8"></div>
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">
+          <script>
+            const groups = {
+              Ink: [
+                '--ink-950',
+                '--ink-900',
+                '--ink-850',
+                '--ink-800',
+                '--ink-700',
+                '--ink-600',
+              ],
+              Bone: ['--bone-50', '--bone-100', '--bone-200'],
+              Silver: ['--silver-300', '--silver-400', '--silver-500'],
+              Electric: [
+                '--electric-300',
+                '--electric-400',
+                '--electric-500',
+                '--electric-600',
+              ],
+              Signal: ['--signal-danger', '--signal-success'],
+            };
+            for (const [group, vars] of Object.entries(groups)) {
+              for (const v of vars) {
+                document.currentScript.insertAdjacentHTML(
+                  'beforebegin',
+                  `<div class="surface p-3"><div style="height:64px;border-radius:8px;background:rgb(var(${v}));border:1px solid rgb(255 255 255 / .08)"></div><p class="type-label mt-3" style="color:rgb(var(--c-text-strong))">${group}</p><p class="type-index">${v.replace('--', '')}</p></div>`
+                );
+              }
+            }
+          </script>
+        </div>
+        <p class="type-small mt-6">
+          Accent use is restrained: focus rings, primary actions, index
+          numerals, atmosphere.
+        </p>
+      </section>
+
+      <!-- TYPOGRAPHY -->
+      <section id="type" class="container-mira py-16">
+        <p class="type-index">02</p>
+        <h2 class="type-h1 mt-2">Typography</h2>
+        <div class="rule my-8"></div>
+        <div class="space-y-10">
+          <div>
+            <p class="type-label mb-3">Display lg · Fraunces</p>
+            <p class="type-display-lg">Origin <em>of</em> signal</p>
+          </div>
+          <div>
+            <p class="type-label mb-3">Display md</p>
+            <p class="type-display-md">The <em>Exploration</em></p>
+          </div>
+          <div>
+            <p class="type-label mb-3">Display sm</p>
+            <p class="type-display-sm">The Creation</p>
+          </div>
+          <div>
+            <p class="type-label mb-3">H1 / H2 · Fraunces</p>
+            <p class="type-h1">Heading one, editorial serif</p>
+            <p class="type-h2 mt-3">Heading two, editorial serif</p>
+          </div>
+          <div>
+            <p class="type-label mb-3">
+              H3 / Lead / Body / Small · Plus Jakarta Sans
+            </p>
+            <p class="type-h3">Heading three in the sans</p>
+            <p class="type-lead measure mt-3">
+              Lead paragraph sets the tone for a chapter in a calm, muted
+              silver.
+            </p>
+            <p class="type-body measure mt-3">
+              Body copy is bone white on near-black, set at a comfortable
+              measure with generous leading so long passages stay readable on
+              both desktop and mobile.
+            </p>
+            <p class="type-small measure mt-3">
+              Small supporting text and captions.
+            </p>
+          </div>
+          <div>
+            <p class="type-label mb-3">Label / Index · JetBrains Mono</p>
+            <p class="type-label">System online · 00 — Initialization</p>
+            <p class="type-index mt-2">01 / 06</p>
+            <blockquote class="type-quote measure mt-4">
+              A quote set in italic display.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPACING -->
+      <section id="space" class="container-mira py-16">
+        <p class="type-index">03</p>
+        <h2 class="type-h1 mt-2">Spacing and layout</h2>
+        <div class="rule my-8"></div>
+        <div class="space-y-3">
+          <script>
+            for (let i = 1; i <= 10; i++) {
+              document.currentScript.insertAdjacentHTML(
+                'beforebegin',
+                `<div class="flex items-center gap-4"><span class="type-index w-24">--space-${i}</span><span style="display:block;height:10px;width:var(--space-${i});background:rgb(var(--c-accent));border-radius:99px"></span></div>`
+              );
+            }
+          </script>
+        </div>
+        <p class="type-small mt-6">
+          Gutter <code class="font-mono">clamp(1.25rem … 4rem)</code> · section
+          rhythm <code class="font-mono">clamp(5rem … 10rem)</code> · container
+          90rem · text measure 42rem. Breakpoints stay on Tailwind's defaults
+          (640 / 768 / 1024 / 1280 / 1536).
+        </p>
+      </section>
+
+      <!-- SURFACES -->
+      <section id="surfaces" class="container-mira py-16">
+        <p class="type-index">04</p>
+        <h2 class="type-h1 mt-2">Surfaces and backgrounds</h2>
+        <div class="rule my-8"></div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="surface p-6">
+            <p class="type-label">.surface</p>
+            <p class="type-small mt-2">Base panel.</p>
+          </div>
+          <div class="surface-raised p-6">
+            <p class="type-label">.surface-raised</p>
+            <p class="type-small mt-2">Elevated panel.</p>
+          </div>
+          <div class="surface-glass p-6">
+            <p class="type-label">.surface-glass</p>
+            <p class="type-small mt-2">Translucent, blurred.</p>
+          </div>
+          <a href="#surfaces" class="surface surface-interactive p-6 block"
+            ><p class="type-label">.surface-interactive</p>
+            <p class="type-small mt-2">Hover or focus me.</p></a
+          >
+        </div>
+        <div
+          class="bg-grain bg-glow-top bg-vignette relative mt-6 overflow-hidden rounded-mira border border-fg/10 bg-canvas-alt p-10 sm:p-16"
+        >
+          <p class="type-label relative">
+            .bg-grain + .bg-glow-top + .bg-vignette
+          </p>
+          <p class="type-display-sm relative mt-4">
+            Atmosphere <em>layers</em>
+          </p>
+        </div>
+      </section>
+
+      <!-- BUTTONS -->
+      <section id="buttons" class="container-mira py-16">
+        <p class="type-index">05</p>
+        <h2 class="type-h1 mt-2">Buttons and interaction</h2>
+        <div class="rule my-8"></div>
+        <div class="flex flex-wrap items-center gap-3">
+          <button class="mira-btn mira-btn-primary">Primary</button>
+          <button class="mira-btn mira-btn-accent">Accent</button>
+          <button class="mira-btn mira-btn-outline">Outline</button>
+          <button class="mira-btn mira-btn-ghost">Ghost</button>
+          <button class="mira-btn mira-btn-primary" disabled>Disabled</button>
+        </div>
+        <div class="mt-4 flex flex-wrap items-center gap-3">
+          <button class="mira-btn mira-btn-outline mira-btn-sm">Small</button>
+          <button class="mira-btn mira-btn-outline">Default</button>
+          <button class="mira-btn mira-btn-outline mira-btn-lg">Large</button>
+        </div>
+        <div class="mt-8 flex flex-wrap items-center gap-6">
+          <a href="#buttons" class="link-line type-body"
+            >Animated underline link</a
+          >
+          <span class="chip">Tag</span>
+          <span class="chip">Mono chip</span>
+        </div>
+        <p class="type-small mt-6">
+          Tab through this page to see the electric-blue focus ring.
+        </p>
+      </section>
+
+      <!-- MOTION -->
+      <section id="motion" class="container-mira py-16 pb-32">
+        <p class="type-index">06</p>
+        <h2 class="type-h1 mt-2">Motion tokens</h2>
+        <div class="rule my-8"></div>
+        <div class="grid gap-4 sm:grid-cols-3">
+          <div class="surface p-6">
+            <p class="type-label">ease-mira-out · duration-slow</p>
+            <div class="mt-4 h-10 rounded-mira-sm bg-electric-500/20 p-1">
+              <div
+                class="h-full w-10 rounded-mira-sm bg-accent transition-transform duration-slow ease-mira-out hover:translate-x-[10rem]"
+                tabindex="0"
+              ></div>
+            </div>
+          </div>
+          <div class="surface p-6">
+            <p class="type-label">ease-mira-in-out · duration-base</p>
+            <div class="mt-4 h-10 rounded-mira-sm bg-electric-500/20 p-1">
+              <div
+                class="h-full w-10 rounded-mira-sm bg-accent transition-transform duration-base ease-mira-in-out hover:translate-x-[10rem]"
+                tabindex="0"
+              ></div>
+            </div>
+          </div>
+          <div class="surface p-6">
+            <p class="type-label">ease-cinematic · duration-cinematic</p>
+            <div class="mt-4 h-10 rounded-mira-sm bg-electric-500/20 p-1">
+              <div
+                class="h-full w-10 rounded-mira-sm bg-accent transition-transform duration-cinematic ease-cinematic hover:translate-x-[10rem]"
+                tabindex="0"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <p class="type-small mt-6">
+          With <code class="font-mono">prefers-reduced-motion</code>, all
+          tokenised durations collapse to near-zero.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
