@@ -6,7 +6,7 @@ import {
   Plane,
   Texture,
   RenderTarget,
-} from 'https://esm.sh/ogl@1.0.11';
+} from 'ogl';
 
 export const photo = (id) =>
   `https://images.unsplash.com/${id}?w=1200&q=80&auto=format&fit=max`;
